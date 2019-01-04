@@ -158,17 +158,42 @@ int main(void)
     }
     
 
-    while(1){                              
-        filosofo(&(jantar[0]), 0);          
-        Sleep(1000);
+    while(1){ 
+
+        filosofo(&(jantar[0]), 0);          // Sleeps(atrasos) de 1 segundo para melhor visualizacao
+        #ifdef _WIN32
+            Sleep(1000);
+        #else
+            usleep(1000);
+        #endif
+
         filosofo(&(jantar[1]), 1);
-        Sleep(1000);
+        #ifdef _WIN32
+            Sleep(1000);
+        #else
+            usleep(1000);
+        #endif
+
         filosofo(&(jantar[2]), 2);
-        Sleep(1000);
+        #ifdef _WIN32
+            Sleep(1000);
+        #else
+            usleep(1000);
+        #endif
+
         filosofo(&(jantar[3]), 3);
-        Sleep(1000);
+        #ifdef _WIN32
+            Sleep(1000);
+        #else
+            usleep(1000);
+        #endif
+
         filosofo(&(jantar[4]), 4);
-        Sleep(1000);
+        #ifdef _WIN32
+            Sleep(1000);
+        #else
+            usleep(1000);
+        #endif
     }
     
 }
