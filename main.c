@@ -164,35 +164,35 @@ int main(void)
         #ifdef _WIN32
             Sleep(1000);
         #else
-            usleep(1000);
+            sleep(1000);
         #endif
 
         filosofo(&(jantar[1]), 1);
         #ifdef _WIN32
             Sleep(1000);
         #else
-            usleep(1000);
+            sleep(1000);
         #endif
 
         filosofo(&(jantar[2]), 2);
         #ifdef _WIN32
             Sleep(1000);
         #else
-            usleep(1000);
+            sleep(1000);
         #endif
 
         filosofo(&(jantar[3]), 3);
         #ifdef _WIN32
             Sleep(1000);
         #else
-            usleep(1000);
+            sleep(1000);
         #endif
 
         filosofo(&(jantar[4]), 4);
         #ifdef _WIN32
             Sleep(1000);
         #else
-            usleep(1000);
+            sleep(1000);
         #endif
     }
     
