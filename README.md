@@ -1,3 +1,3 @@
 # projetoDPP
 
-Implementação Jantar dos Filósofos - Projeto Sistemas Operacionais
+Jantar dos Filósofos - Projeto Sistemas Operacionais
