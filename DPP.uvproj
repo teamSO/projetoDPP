@@ -416,14 +416,9 @@
               <FilePath>.\lpc2103.h</FilePath>
             </File>
             <File>
-              <FileName>DPP.c</FileName>
+              <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\DPP.c</FilePath>
-            </File>
-            <File>
-              <FileName>mutex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\mutex.c</FilePath>
+              <FilePath>.\main.c</FilePath>
             </File>
           </Files>
         </Group>
