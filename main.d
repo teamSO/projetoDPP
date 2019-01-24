@@ -1,2 +1,11 @@
 .\main.o: main.c
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\time.h
+.\main.o: main.h
+.\main.o: pt-sem.h
+.\main.o: pt.h
+.\main.o: lc.h
+.\main.o: lc-switch.h
 .\main.o: lpc2103.h

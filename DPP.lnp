@@ -1,7 +1,7 @@
 --cpu ARM7TDMI
 ".\startup.o"
 ".\main.o"
---ropi --rwpi --strict --scatter ".\DPP.sct"
+--rwpi --strict --scatter ".\DPP.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\DPP.map" -o .\DPP.axf

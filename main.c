@@ -1,60 +1,41 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <time.h>
+
+#include "main.h"
 #include "lpc2103.h"
 
-#define locked 1
+int main(void)
+{
 
+    int cont = 0;
+    PT_SEM_INIT(&mutex, 1);                 
+    for(cont=0; cont < N; cont++)           
+    {                                       
+        PT_SEM_INIT(&(mux_f[cont]), 1);         
+        PT_INIT(&(jantar[cont]));
+    }
+    
 
-struct pt_sem {
-  unsigned int count;
-};
+    while(1){ 
 
+        filosofo(&(jantar[0]), 0);          
+      
 
-void muda_mutex(int *mutex, int *valor) {
-  
+        filosofo(&(jantar[1]), 1);
+      
 
-  __asm {
-				LDR    	r0, [mutex]
-        LDR     r1, [valor]
-        SWP 		r1, r1, [r0]
-  
-	}
-}
+        filosofo(&(jantar[2]), 2);
+    
 
-void muda_mutex_sucess(int *mutex) {
-  int r9 = *mutex + 0x1;
+        filosofo(&(jantar[3]), 3);
+      
 
-  __asm {
-			
-        SWP 		r9, r9, [mutex]
-	}
-}
-
-void sem_inc(unsigned int *mutex) {
-  unsigned int r0 = *mutex + 0x1;
-
-  __asm {
-			
-        SWP 		r0, r0, [mutex]
-	}
-}
-
-void sem_dec(unsigned int *mutex) {
-  unsigned int r0 = *mutex - 0x1;
-
-  __asm {
-			
-        SWP 		r0, r0, [mutex]
-	}
+        filosofo(&(jantar[4]), 4);
+     
+    }
+    
 }
 
 
-
-int main(){
-	
-	static struct pt_sem mu; 
-	
-	(&mu)->count = 0x4;
-	
-	sem_dec(&((&mu)->count));
-	
-
-}
